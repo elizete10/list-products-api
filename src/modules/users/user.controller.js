@@ -2,6 +2,7 @@ import { makeUserService } from './user.service.js';
 import { ensureAuth } from '../../middlewares/auth.js';
 export const makeUserController = () => {
     const service = makeUserService();
+    
     const register = async (req, res, next) => {
         try {
             const { name, email, password } = req.body;

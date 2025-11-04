@@ -1,4 +1,4 @@
-export const validade = (schemas = {}) => (request, _response, next) => {
+export const validate = (schemas = {}) => (request, _response, next) => {
     try {
             if(schemas.body) request.body = schemas.body.parse(request.body)
             if(schemas.query) request.query = schemas.body.parse(request.query)

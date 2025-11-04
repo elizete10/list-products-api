@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken"
 import { env } from "../config/env.js"
 
 export const ensureAuth = (request, _response, next) => {
-    const header = request.header.authorization
+    const header = request.headers.authorization
 
     if (!header) {
         return next({
